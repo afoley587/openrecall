@@ -1,0 +1,17 @@
+---
+services:
+  openrecall:
+    build:
+      context: ../
+    ports:
+      - 8082:8082
+    volumes:
+      - openrecall:/tmp/openrecalldata
+    command:
+      - python3
+      - -m
+      - openrecall.app
+      - --storage-path=/tmp/openrecalldata
+
+volumes:
+  openrecall: {}
