@@ -1,6 +1,7 @@
 ---
 services:
   openrecall:
+    image: openrecall
     build:
       context: ../
     ports:

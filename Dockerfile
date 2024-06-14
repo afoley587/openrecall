@@ -30,6 +30,7 @@ RUN adduser \
     --uid "${UID}" \
     appuser
 
+RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 
 # Copy the source code into the container.
 COPY . .
